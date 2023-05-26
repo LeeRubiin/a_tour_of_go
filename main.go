@@ -1,14 +1,12 @@
 package main
 
 import (
-
  "fmt"
- //"math"
- //"math/cmplx"
- //"math/rand"
-
+ "math"
+ "math/cmplx"
+ "math/rand"
 )
-/*
+
  func add(x int, y int) int {
   return x + y
  }
@@ -48,17 +46,10 @@ func needInt(x int) int { return x*10 + 1 }
 
  func needFloat(x float64) float64 {
   return x * 0.1
- }
-*/
-func changeLocal(num *[5]int) { // *
-  num[0] = 55
-
-  fmt.Println("\ninside function:\n ", &num)
-
 }
 
  func main() {
- /* fmt.Println("My favorite number is", rand.Intn(20))
+  fmt.Println("My favorite number is", rand.Intn(20))
   fmt.Printf("Now you have %g problems.\n", math.Sqrt(7))
   fmt.Println(math.Pi)
   fmt.Println(add(42, 13))
@@ -91,16 +82,4 @@ func changeLocal(num *[5]int) { // *
   fmt.Println(needInt(Small))
   fmt.Println(needFloat(Small))
   fmt.Println(needFloat(Big))
-*/
-
-  num := [...]int{5, 6, 7, 8, 8}
-  fmt.Println("\nbefore passing to function:\n ", &num)
-
-  changeLocal(&num) //num is passed by value
-  fmt.Println("\nadress of num:\n  ", &num)
-
-  fmt.Println("\nafter passing to function: ", &num)
- }
-
-
-
+}
